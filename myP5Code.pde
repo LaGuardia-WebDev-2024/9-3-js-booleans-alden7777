@@ -3,11 +3,23 @@ setup = function(){
     size(400, 400); 
 };
 
-var theNumber = 100;
+var theNumber =0;
 
 //draw Function - will run repeatedly
 draw = function() {
   background(255,255,255,200);
+  if(theNumber>0){
+  noFill();
+  rect(5, 60, 200, 40); 
+  };
+  if(theNumber<0){
+  noFill();  
+  rect(5, 110, 200, 40);
+  };
+  if(theNumber==0){
+    noFill();
+   rect(5, 160, 200, 40);
+  };
   
   fill(0, 0, 0);
   textSize(30);
@@ -17,8 +29,9 @@ draw = function() {
   text("It's negative", 10, 140);
   text("It's zero", 10, 190);
 
-  noFill();
-  rect(5, 60, 200, 40); 
+ 
+
+  
 };
 
 //draw Function - will run when mouseClicked
